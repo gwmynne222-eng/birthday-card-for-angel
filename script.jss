@@ -1,25 +1,15 @@
-function blowCandle() {
-  const msg = document.getElementById("secret-message");
-  msg.style.display = "block";
-}
+const candle = document.getElementById("candle");
+const message = document.getElementById("message");
+const music = document.getElementById("bg-music");
 
-function previewImages(event) {
-  const preview = document.getElementById("image-preview");
-  preview.innerHTML = "";
+let opened = false;
 
-  Array.from(event.target.files).forEach(file => {
-    const reader = new FileReader();
-    reader.onload = e => {
-      const img = document.createElement("img");
-      img.src = e.target.result;
-      preview.appendChild(img);
-    };
-    reader.readAsDataURL(file);
-  });
-}
+candle.addEventListener("click", () => {
+  if (!opened) {
+    message.classList.add("show");
+    opened = true;
+  }
 
-// Autoplay fix (untuk HP)
-window.addEventListener("click", () => {
-  const music = document.getElementById("bg-music");
+  // memastikan musik jalan di HP
   music.play();
-}, { once: true });
+});
