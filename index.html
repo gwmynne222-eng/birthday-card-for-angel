@@ -1,3 +1,51 @@
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
-<audio src="music-box-birthday.mp3"></audio>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>happyy birthdayyy angelll !!!!! 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Musik -->
+  <audio id="bg-music" src="music-box-birthday.mp3" autoplay loop></audio>
+
+  <div class="card">
+    <h1 id="title">happyy birthdayyy angelll !!!!! 🎂</h1>
+
+    <p class="subtitle">tap the candle 🕯️</p>
+
+    <!-- Lilin -->
+    <div class="candle" onclick="blowCandle()">
+      🕯️
+    </div>
+
+    <!-- Pesan tersembunyi -->
+    <div id="secret-message" class="hidden">
+      <p>
+        happy birthday, loveee 🎂🤍<br><br>
+        jujur ya, gue bersyukur banget bisa ketemu lo di dunia baru gue ini !!
+        lo bikin hari hari gue lebih ringan, bahkan waktu dunia gue lagi ribet-ribetnya.
+        makasih yaaa krnaa udah dateng buat ngeramein hidup gue, dengerin curhatan gue
+        yang kadang ga penting, dan tetep stay walau gue suka random.<br><br>
+
+        gue harap di umur baru lo ini, hidup lo makin baik, mimpi-mimpi lo satu persatuu
+        terwujud, dan lo selalu inget kalo lo sepantes itu buat bahagia.
+        jangan terlalu keras sama diri sendiri ya, lo udah hebat banget sejauh ini.<br><br>
+
+        love uu sm !! 💖✨
+      </p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <h3>our memories 📸</h3>
+      <input type="file" accept="image/*" multiple onchange="previewImages(event)">
+      <div id="image-preview"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
